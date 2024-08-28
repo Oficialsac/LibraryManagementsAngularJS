@@ -1,0 +1,20 @@
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.user-card {
+    max-width: 400px; 
+    width: 100%; 
+}
+
+p-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+

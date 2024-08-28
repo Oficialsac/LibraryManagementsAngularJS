@@ -1,0 +1,9 @@
+:host {
+  display: block;
+  width: 100%;
+  background-color: #f8f9fa;
+}
+
+p-menubar {
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,18 @@
+<div class="card-container">
+    <p-card *ngFor="let reser of reservations" [header]="reser.reservationId" [subheader]="reser.bookIsbn">
+        <div class="card-content">
+            <p><strong>Book ISBN:</strong> {{ reser.bookIsbn }}</p>
+            <p><strong>Reservation Date:</strong> {{ reser.reservationDate | date }}</p>
+            <p><strong>Expiration Date:</strong> {{ reser.expirationDate | date }}</p>
+            <p><strong>Status:</strong> {{ reser.status }}</p>
+        </div>
+        <div class="card-footer">
+            <div>
+                <p-button label="Delete" (click)="removeReservation(reser._id)"></p-button>
+            </div>
+            <div>
+                <p-button label="Update" (click)="updateReservation(reser)"></p-button>
+            </div>
+        </div>
+    </p-card>
+</div>

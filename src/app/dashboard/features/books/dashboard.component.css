@@ -1,0 +1,45 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .card-content p {
+    margin: 0.5rem 0;
+  }
+  
+  p-card {
+    width: 400px;
+  }
+  
+.card-content{
+    margin: 10px;
+}
+
+.p-card-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.books-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}

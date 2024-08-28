@@ -1,0 +1,16 @@
+<div class="books-section">
+    <h2>Lista de libros disponibles</h2>
+    <div class="card-container">
+        <p-card *ngFor="let book of books" [header]="book.title" [subheader]="book.author">
+            <div class="card-content">
+                <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+                <p><strong>Publisher:</strong> {{ book.publisher }}</p>
+                <p><strong>Publication Date:</strong> {{ book.publicationDate | date }}</p>
+                <p><strong>Genre:</strong> {{ book.genre }}</p>
+            </div>
+            <div class="card-footer">
+                <p-button label="Reservar libro" (click)="setReservation(book.isbn)"></p-button>
+            </div>
+        </p-card>
+    </div>
+</div>

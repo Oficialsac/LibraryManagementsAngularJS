@@ -1,0 +1,11 @@
+<div class="card-container">
+    <p-card header="User Information" class="user-card">
+        <div class="card-content">
+            <p><strong>ID:</strong> {{ user.id }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+        </div>
+        <p-footer>
+            <p-button pButton type="button" label="Logout" class="" (click)="logout()"></p-button>
+        </p-footer>
+    </p-card>
+</div>

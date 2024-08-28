@@ -1,0 +1,29 @@
+<div class="form-container">
+    <p-card header="Reservation Form" class="p-shadow-2">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="p-fluid">
+                <div class="p-field">
+                    <label for="bookIsbn">Book ISBN</label>
+                    <input id="bookIsbn" formControlName="bookIsbn" pInputText>
+                </div>
+                <div class="p-field">
+                    <label for="reservationDate">Reservation Date</label>
+                    <input id="reservationDate" formControlName="reservationDate" pInputText type="date">
+                    <div *ngIf="form.get('reservationDate')?.hasError('invalidReservationDate')">
+                        <small class="p-error">The reservation date cannot be earlier than today.</small>
+                    </div>
+                </div>
+                <div class="p-field">
+                    <label for="expirationDate">Expiration Date</label>
+                    <input id="expirationDate" formControlName="expirationDate" pInputText type="date">
+                    <div *ngIf="form.hasError('expirationBeforeReservation')">
+                        <small class="p-error">The expiration date cannot be before than reservation.</small>
+                    </div>
+                </div>
+                <div class="p-field">
+                    <button pButton type="submit" label="Submit" class="p-mt-2"></button>
+                </div>
+            </div>
+        </form>
+    </p-card>
+</div>
